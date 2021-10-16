@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+  <div><span>WHALE</span></div>
+  <span class="example-spacer"></span>
+  <div>
+   <button mat-button class="header-menu" routerLink="/" [matMenuTriggerFor]="menu">Nam</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+        <button mat-button class="header-menu" routerLink="/" [matMenuTriggerFor]="menu">Nữ</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+        <button mat-button class="header-menu" routerLink="/" [matMenuTriggerFor]="menu">Trẻ em</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+        <button mat-button routerLink="/" [matMenuTriggerFor]="menu">Thể thao</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+        <button mat-button routerLink="/" [matMenuTriggerFor]="menu">Các nhãn hiệu</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+  </div>
+  <span class="example-spacer"></span>
+   <div class ="search">
+      <input class="input-search" matInput placeholder="Tìm kiếm">
+      <mat-icon (click)="search()">search</mat-icon>
+    </div>
+    <div><span class="example-spacer"></span>
+    <button mat-icon-button color="primary" aria-label="This is cart">
+      <mat-icon>local_mall</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+

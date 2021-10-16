@@ -1,0 +1,143 @@
+<div class="carousel-slideshow">
+<div class="slider">
+  <div class="slides">
+    <input type="radio" name="radio-btn" id="radio1">
+    <input type="radio" name="radio-btn" id="radio2">
+    <input type="radio" name="radio-btn" id="radio3">
+    <input type="radio" name="radio-btn" id="radio4">
+
+    <div class = "slide first">
+      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/7ed0855435194229a525aad6009a0497_9366/Giay_Superstar_trang_EG4958_01_standard.jpg" alt="images/">
+    </div>
+    <div class="slide">
+      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/1f893c7c14424f6f8f72a98101359ecb_9366/Giay_Grand_Court_trang_F36483_01_standard.jpg" alt="images/">
+    </div>
+    <div class="slide">
+      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/c7227d99699243099c24ac5e00406c2c_9366/Giay_co_lung_Forum_trang_FY4976_01_standard.jpg" alt="images/">
+    </div>
+    <div class="slide">
+      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/6a0d6246e26a4852825dad3900baddfd_9366/Giay_Ultraboost_DNA_x_LEGO(r)_Colors_trang_FZ3983_01_standard.jpg" alt="images/">
+    </div>
+    <div class="navigation-auto">
+      <div class="auto-btn1"></div>
+      <div class="auto-btn2"></div>
+      <div class="auto-btn3"></div>
+      <div class="auto-btn4"></div>
+    </div>
+
+  </div>
+  <div class = "navigation-manual">
+    <label for="radio1" class="manual-btn"></label>
+    <label for="radio2" class="manual-btn"></label>
+    <label for="radio3" class="manual-btn"></label>
+    <label for="radio4" class="manual-btn"></label>
+  </div>
+</div>
+ <script type="text/javascript">
+ var counter = 1;
+ setInterval(function() {
+   document.getElementById('radio' + counter).checked =true;
+   counter++;
+   if(counter > 4){
+     counter = 1;
+   }
+ },500);
+ </script>
+</div>
+  <!-- <carousel>
+    <div class="carousel-cell">
+        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/6a0d6246e26a4852825dad3900baddfd_9366/Giay_Ultraboost_DNA_x_LEGO(r)_Colors_trang_FZ3983_01_standard.jpg">
+    </div>
+    <div class="carousel-cell">
+      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/1f893c7c14424f6f8f72a98101359ecb_9366/Giay_Grand_Court_trang_F36483_01_standard.jpg">
+    </div>
+  </carousel> -->
+  <!-- <carousel
+    [images]="images"
+    [objectFit]="'cover'"
+    [cellWidth]="'100%'"
+    [arrowsOutside]="true"
+    [autoplay]="true"
+    [dots]="true"
+    [loop]="true">
+</carousel> -->
+<!-- <carousel>
+  <div class="carousel-cell">
+    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/6a0d6246e26a4852825dad3900baddfd_9366/Giay_Ultraboost_DNA_x_LEGO(r)_Colors_trang_FZ3983_01_standard.jpg">
+    <ul>
+      <li>Giá: 20000</li>
+      <li>Giay_Ultraboost_DNA_x_LEGO</li>
+    </ul>
+
+  </div>
+  <div class="carousel-cell">2</div>
+</carousel> -->
+<!-- <mat-toolbar-row>
+<carousel [width]=2000 [height] = 700 [cellWidth] = 100 [cellsToShow]= 4>
+  <div class="carousel-cell">
+    <div *ngFor="let item of items">
+    <app-product-display [product]={item}></app-product-display>
+    </div>
+  </div>
+  <div class="carousel-cell">2</div>
+</carousel>
+</mat-toolbar-row> -->
+<div class ="body-home">
+<p-carousel [value]="products" [numVisible]="5" [numScroll]="3" [circular]="false" [showIndicators]="false" >
+  <ng-template pTemplate="header">
+    <h1>FASH DEAL</h1>
+  </ng-template>
+  <ng-template let-product pTemplate="item">
+      <div class="product-item">
+          <div class="product-item-content">
+              <div class="p-mb-3">
+                <img src="{{product.productImg}}" [alt]="product.productName" class="product-image">
+              </div>
+              <div>
+                  <h4 class="p-mb-1">{{product.productName}}</h4>
+                  <h6 class="p-mt-0 p-mb-3">${{product.Price}}</h6>
+                  <span [class]="'product-badge status-'+product.Description.toLowerCase()">{{product.Description}}</span>
+                  <div class="car-buttons p-mt-5">
+                      <p-button type="button" styleClass="p-button p-button-rounded p-mr-2" icon="pi pi-search"></p-button>
+                      <p-button type="button" styleClass="p-button-success p-button-rounded p-mr-2" icon="pi pi-star"></p-button>
+                      <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </ng-template>
+</p-carousel>
+<p-carousel [value]="products" [numVisible]="5" [numScroll]="3" [circular]="false" [showIndicators]="false" >
+  <ng-template pTemplate="header">
+    <h1>NEW ARRIVALS</h1>
+  </ng-template>
+  <ng-template let-product pTemplate="item">
+      <div class="product-item">
+          <div class="product-item-content">
+              <div class="p-mb-3">
+                <img src="{{product.productImg}}" [alt]="product.productName" class="product-image">
+              </div>
+              <div>
+                  <h4 class="p-mb-1">{{product.productName}}</h4>
+                  <h6 class="p-mt-0 p-mb-3">${{product.Price}}</h6>
+                  <span [class]="'product-badge status-'+product.Description.toLowerCase()">{{product.Description}}</span>
+                  <div class="car-buttons p-mt-5">
+                      <p-button type="button" styleClass="p-button p-button-rounded p-mr-2" icon="pi pi-search"></p-button>
+                      <p-button type="button" styleClass="p-button-success p-button-rounded p-mr-2" icon="pi pi-star"></p-button>
+                      <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </ng-template>
+</p-carousel>
+<div>
+  <ng-template pTemplate="header">
+    <h1>NEW ARRIVALS</h1>
+  </ng-template>
+<div *ngFor="let item of products">
+  <app-product-display [product] = "item"></app-product-display>
+</div>
+</div>
+</div>
+
