@@ -1,49 +1,20 @@
-<div class="carousel-slideshow">
-<div class="slider">
-  <div class="slides">
-    <input type="radio" name="radio-btn" id="radio1">
-    <input type="radio" name="radio-btn" id="radio2">
-    <input type="radio" name="radio-btn" id="radio3">
-    <input type="radio" name="radio-btn" id="radio4">
-
-    <div class = "slide first">
-      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/7ed0855435194229a525aad6009a0497_9366/Giay_Superstar_trang_EG4958_01_standard.jpg" alt="images/">
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[0]" alt="Random first slide">
     </div>
-    <div class="slide">
-      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/1f893c7c14424f6f8f72a98101359ecb_9366/Giay_Grand_Court_trang_F36483_01_standard.jpg" alt="images/">
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[1]" alt="Random second slide">
     </div>
-    <div class="slide">
-      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/c7227d99699243099c24ac5e00406c2c_9366/Giay_co_lung_Forum_trang_FY4976_01_standard.jpg" alt="images/">
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img [src]="images[2]" alt="Random third slide">
     </div>
-    <div class="slide">
-      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/6a0d6246e26a4852825dad3900baddfd_9366/Giay_Ultraboost_DNA_x_LEGO(r)_Colors_trang_FZ3983_01_standard.jpg" alt="images/">
-    </div>
-    <div class="navigation-auto">
-      <div class="auto-btn1"></div>
-      <div class="auto-btn2"></div>
-      <div class="auto-btn3"></div>
-      <div class="auto-btn4"></div>
-    </div>
-
-  </div>
-  <div class = "navigation-manual">
-    <label for="radio1" class="manual-btn"></label>
-    <label for="radio2" class="manual-btn"></label>
-    <label for="radio3" class="manual-btn"></label>
-    <label for="radio4" class="manual-btn"></label>
-  </div>
-</div>
- <script type="text/javascript">
- var counter = 1;
- setInterval(function() {
-   document.getElementById('radio' + counter).checked =true;
-   counter++;
-   if(counter > 4){
-     counter = 1;
-   }
- },500);
- </script>
-</div>
+  </ng-template>
+</ngb-carousel>
   <!-- <carousel>
     <div class="carousel-cell">
         <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/6a0d6246e26a4852825dad3900baddfd_9366/Giay_Ultraboost_DNA_x_LEGO(r)_Colors_trang_FZ3983_01_standard.jpg">
@@ -83,12 +54,12 @@
 </carousel>
 </mat-toolbar-row> -->
 <div class ="body-home">
-<p-carousel [value]="products" [numVisible]="5" [numScroll]="3" [circular]="false" [showIndicators]="false" >
+<p-carousel [value]="products" [numVisible]="4" [numScroll]="4" [circular]="false" [showIndicators]="false" >
   <ng-template pTemplate="header">
-    <h1>FASH DEAL</h1>
+    <span class="title-product-home">FASH DEAL</span>
   </ng-template>
   <ng-template let-product pTemplate="item">
-      <div class="product-item">
+      <!-- <div class="product-item">
           <div class="product-item-content">
               <div class="p-mb-3">
                 <img src="{{product.productImg}}" [alt]="product.productName" class="product-image">
@@ -104,15 +75,16 @@
                   </div>
               </div>
           </div>
-      </div>
+      </div> -->
+      <app-product-display [product]="product"></app-product-display>
   </ng-template>
 </p-carousel>
-<p-carousel [value]="products" [numVisible]="5" [numScroll]="3" [circular]="false" [showIndicators]="false" >
+<p-carousel [value]="products" [numVisible]="4" [numScroll]="4" [circular]="false" [showIndicators]="false" >
   <ng-template pTemplate="header">
-    <h1>NEW ARRIVALS</h1>
+    <span class="title-product-home">NEW ARRIVALS</span>
   </ng-template>
   <ng-template let-product pTemplate="item">
-      <div class="product-item">
+      <!-- <div class="product-item">
           <div class="product-item-content">
               <div class="p-mb-3">
                 <img src="{{product.productImg}}" [alt]="product.productName" class="product-image">
@@ -128,15 +100,21 @@
                   </div>
               </div>
           </div>
-      </div>
+      </div> -->
+      <app-product-display [product]="product"></app-product-display>
   </ng-template>
 </p-carousel>
 <div>
-  <ng-template pTemplate="header">
-    <h1>NEW ARRIVALS</h1>
-  </ng-template>
-<div *ngFor="let item of products">
+  <span class="title-product-home">SALE</span>
+<div class="row">
+<div class="panel-product-sale col-3">
+  <img src="https://bizweb.dktcdn.net/100/424/874/themes/817899/assets/collection_2_banner.jpg?1634203525795">
+</div>
+<div class="product-sale col">
+<div *ngFor="let item of products" class="product-ngsale mb-2">
   <app-product-display [product] = "item"></app-product-display>
+</div>
+</div>
 </div>
 </div>
 </div>

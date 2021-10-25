@@ -23,6 +23,15 @@ import {ButtonModule} from 'primeng/button';
 import {ToastModule} from 'primeng/toast';
 import {FormsModule} from '@angular/forms';
 import {ImageModule} from 'primeng/image';
+import {ProductAllComponent} from './components/product-all/product-all.component';
+import {LoginComponent} from './components/login/login.component';
+import {CheckboxModule} from 'primeng/checkbox';
+import {CategoryComponent} from './components/category/category.component';
+import {SliderModule} from 'primeng/slider';
+import {PanelMenuModule} from 'primeng/panelmenu';
+import {DropdownModule} from 'primeng/dropdown';
+import {DialogModule} from 'primeng/dialog';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 
 @NgModule({
@@ -30,7 +39,11 @@ import {ImageModule} from 'primeng/image';
     AppComponent,
     NavComponent,
     BodyHomeComponent,
-    ProductDisplayComponent
+    ProductDisplayComponent,
+    ProductAllComponent,
+    LoginComponent,
+    CategoryComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +62,13 @@ import {ImageModule} from 'primeng/image';
     ButtonModule,
     ToastModule,
     FormsModule,
-    ImageModule
+    ImageModule,
+    NgbModule,
+    CheckboxModule,
+    SliderModule,
+    PanelMenuModule,
+    DropdownModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

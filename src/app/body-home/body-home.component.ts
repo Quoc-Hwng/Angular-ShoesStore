@@ -13,6 +13,9 @@ export class BodyHomeComponent implements OnInit {
     new Product('P02', 'Jeans','https://assets.adidas.com/images/w_600,f_auto,q_auto/7ed0855435194229a525aad6009a0497_9366/Giay_Superstar_trang_EG4958_01_standard.jpg',41,'Black',10,'Male','500000','Sneaker','Nike'),
     new Product('P02', 'Jeans','https://assets.adidas.com/images/w_600,f_auto,q_auto/7ed0855435194229a525aad6009a0497_9366/Giay_Superstar_trang_EG4958_01_standard.jpg',42,'White',10,'Male','600000','Sneaker','Puma'),
     new Product('P02', 'Jeans','https://assets.adidas.com/images/w_600,f_auto,q_auto/7ed0855435194229a525aad6009a0497_9366/Giay_Superstar_trang_EG4958_01_standard.jpg',39,'White',10,'Female','700000','Sneaker','Puma'),
+    new Product('P02', 'Jeans','https://assets.adidas.com/images/w_600,f_auto,q_auto/7ed0855435194229a525aad6009a0497_9366/Giay_Superstar_trang_EG4958_01_standard.jpg',39,'White',10,'Female','700000','Sneaker','Puma'),
+    new Product('P02', 'Jeans','https://assets.adidas.com/images/w_600,f_auto,q_auto/7ed0855435194229a525aad6009a0497_9366/Giay_Superstar_trang_EG4958_01_standard.jpg',39,'White',10,'Female','700000','Sneaker','Puma'),
+    new Product('P02', 'Jeans','https://assets.adidas.com/images/w_600,f_auto,q_auto/7ed0855435194229a525aad6009a0497_9366/Giay_Superstar_trang_EG4958_01_standard.jpg',39,'White',10,'Female','700000','Sneaker','Puma')
   ];
   constructor() { }
 
@@ -22,8 +25,9 @@ export class BodyHomeComponent implements OnInit {
           money: 20000,
           name: 'Fizh'}
 ]
-
+    images = [944, 1011, 984].map((n) => `https://bizweb.dktcdn.net/100/424/874/themes/817899/assets/slider_3.jpg?1634203525795`);
 }
+
 // export class CarouselDemo {
 
 //   products: Product[];
