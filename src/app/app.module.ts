@@ -32,6 +32,9 @@ import {PanelMenuModule} from 'primeng/panelmenu';
 import {DropdownModule} from 'primeng/dropdown';
 import {DialogModule} from 'primeng/dialog';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { HttpClientModule } from '@angular/common/http';
+import {GalleriaModule} from 'primeng/galleria';
+import { ProductCartComponent } from './components/product-cart/product-cart.component';
 
 
 @NgModule({
@@ -43,7 +46,8 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     ProductAllComponent,
     LoginComponent,
     CategoryComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductCartComponent
   ],
   imports: [
     BrowserModule,
@@ -68,7 +72,9 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     SliderModule,
     PanelMenuModule,
     DropdownModule,
-    DialogModule
+    DialogModule,
+    HttpClientModule,
+    GalleriaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,40 @@
+.container{
+  max-width: 1280px;
+}
+.product-img{
+  width: 520px;
+}
+.product-title{
+  font-size: 2em;
+  line-height: 2.5em;
+  font-weight: bold;
+}
+.product-title::after{
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: gray;
+  display: block;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.change-quantity {
+  display: inline-block;
+  width: 26px;
+}
+.quantity-number{
+  width: 100px;
+  display: inline;
+  line-height: 26px;
+}
+.quantity-number::focus {
+  outline: none;
+}

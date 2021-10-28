@@ -15,67 +15,12 @@
     </div>
   </ng-template>
 </ngb-carousel>
-  <!-- <carousel>
-    <div class="carousel-cell">
-        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/6a0d6246e26a4852825dad3900baddfd_9366/Giay_Ultraboost_DNA_x_LEGO(r)_Colors_trang_FZ3983_01_standard.jpg">
-    </div>
-    <div class="carousel-cell">
-      <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/1f893c7c14424f6f8f72a98101359ecb_9366/Giay_Grand_Court_trang_F36483_01_standard.jpg">
-    </div>
-  </carousel> -->
-  <!-- <carousel
-    [images]="images"
-    [objectFit]="'cover'"
-    [cellWidth]="'100%'"
-    [arrowsOutside]="true"
-    [autoplay]="true"
-    [dots]="true"
-    [loop]="true">
-</carousel> -->
-<!-- <carousel>
-  <div class="carousel-cell">
-    <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/6a0d6246e26a4852825dad3900baddfd_9366/Giay_Ultraboost_DNA_x_LEGO(r)_Colors_trang_FZ3983_01_standard.jpg">
-    <ul>
-      <li>Giá: 20000</li>
-      <li>Giay_Ultraboost_DNA_x_LEGO</li>
-    </ul>
-
-  </div>
-  <div class="carousel-cell">2</div>
-</carousel> -->
-<!-- <mat-toolbar-row>
-<carousel [width]=2000 [height] = 700 [cellWidth] = 100 [cellsToShow]= 4>
-  <div class="carousel-cell">
-    <div *ngFor="let item of items">
-    <app-product-display [product]={item}></app-product-display>
-    </div>
-  </div>
-  <div class="carousel-cell">2</div>
-</carousel>
-</mat-toolbar-row> -->
 <div class ="body-home">
 <p-carousel [value]="products" [numVisible]="4" [numScroll]="4" [circular]="false" [showIndicators]="false" >
   <ng-template pTemplate="header">
     <span class="title-product-home">FASH DEAL</span>
   </ng-template>
   <ng-template let-product pTemplate="item">
-      <!-- <div class="product-item">
-          <div class="product-item-content">
-              <div class="p-mb-3">
-                <img src="{{product.productImg}}" [alt]="product.productName" class="product-image">
-              </div>
-              <div>
-                  <h4 class="p-mb-1">{{product.productName}}</h4>
-                  <h6 class="p-mt-0 p-mb-3">${{product.Price}}</h6>
-                  <span [class]="'product-badge status-'+product.Description.toLowerCase()">{{product.Description}}</span>
-                  <div class="car-buttons p-mt-5">
-                      <p-button type="button" styleClass="p-button p-button-rounded p-mr-2" icon="pi pi-search"></p-button>
-                      <p-button type="button" styleClass="p-button-success p-button-rounded p-mr-2" icon="pi pi-star"></p-button>
-                      <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
-                  </div>
-              </div>
-          </div>
-      </div> -->
       <app-product-display [product]="product"></app-product-display>
   </ng-template>
 </p-carousel>
@@ -84,23 +29,6 @@
     <span class="title-product-home">NEW ARRIVALS</span>
   </ng-template>
   <ng-template let-product pTemplate="item">
-      <!-- <div class="product-item">
-          <div class="product-item-content">
-              <div class="p-mb-3">
-                <img src="{{product.productImg}}" [alt]="product.productName" class="product-image">
-              </div>
-              <div>
-                  <h4 class="p-mb-1">{{product.productName}}</h4>
-                  <h6 class="p-mt-0 p-mb-3">${{product.Price}}</h6>
-                  <span [class]="'product-badge status-'+product.Description.toLowerCase()">{{product.Description}}</span>
-                  <div class="car-buttons p-mt-5">
-                      <p-button type="button" styleClass="p-button p-button-rounded p-mr-2" icon="pi pi-search"></p-button>
-                      <p-button type="button" styleClass="p-button-success p-button-rounded p-mr-2" icon="pi pi-star"></p-button>
-                      <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
-                  </div>
-              </div>
-          </div>
-      </div> -->
       <app-product-display [product]="product"></app-product-display>
   </ng-template>
 </p-carousel>
