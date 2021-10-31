@@ -10,7 +10,7 @@
       "Color": "#FFFFFF",
       "Quantity": 10,
       "Sex": "Female",
-      "Price": "700000",
+      "Price": 700000,
       "Description": "GoodJob",
       "Brand": "Nike"
     },
@@ -24,7 +24,7 @@
       "Color": "#FFFFFF",
       "Quantity": 10,
       "Sex": "Male",
-      "Price": "700000",
+      "Price": 700000,
       "Description": "GoodJob",
       "Brand": "Adidas"
     }

@@ -1,38 +1,35 @@
-<div class= "container">
+<div class= "container" *ngIf="product">
   <div class="row">
-  <div class="img-product-view col-5">
-    <img class="product-img" src="{{product.productImg}}" >
+    <div class="img-product-view col-5">
+      <img class="product-img" src="{{product.productImg}}" >
     <!-- <p-galleria [value]="product.productImgS">
       <ng-template pTemplate="item" let-item>
           <img [src]="item.productImg"/>
       </ng-template>
    </p-galleria> -->
-    <div>
-
     </div>
-  </div>
-  <div class = "product-infor col-5">
-    <span class = "product-title">{{product.productName}}</span>
-    <p class = "">Mã sản phẩm: <span>1GM00849D-050-220</span> </p>
-    <p class = "">Thương hiệu: <span>Đang cập nhật</span></p>
-    <p>Tình trạng:
-      <span>Còn hàng</span>
-    </p>
-    <span>1800000</span>
-    <span></span>
-    <div class="select-quantity">
-      <span>Số lượng: </span>
-      <div>
-        <button class="btn btn-light change-quantity text-center"> + </button>
-        <input class="quantity-number" type="number"/>
-        <button class="btn btn-light change-quantity text-center"> - </button>
+    <div class = "product-infor col-5">
+      <span class = "product-title">{{product.productName}}</span>
+      <p class = "">Mã sản phẩm: <span>{{product.ID_Product}}</span> </p>
+      <p class = "">Thương hiệu: <span>{{product.Brand}}</span></p>
+      <p>Tình trạng:
+        <span>Còn hàng</span>
+      </p>
+      <span>{{product.Price | currency}}</span>
+      <span></span>
+      <div class="select-quantity">
+        <span>Số lượng: </span>
+        <div>
+          <button class="btn btn-light change-quantity text-center"> + </button>
+          <input class="quantity-number" type="number"/>
+          <button class="btn btn-light change-quantity text-center"> - </button>
+        </div>
       </div>
-    </div>
-    <div class="">
-      <button class="btn btn-primary">THÊM VÀO GIỎ</button>
-      <button class="btn btn-primary">MUA NGAY</button>
-    </div>
+      <div class="">
+        <button class="btn btn-primary" (click)="addToCart(product)" >THÊM VÀO GIỎ</button>
+        <button class="btn btn-primary">MUA NGAY</button>
+      </div>
 
+    </div>
   </div>
-</div>
 </div>

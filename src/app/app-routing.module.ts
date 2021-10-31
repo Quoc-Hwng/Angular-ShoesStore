@@ -8,7 +8,7 @@ import { ProductCartComponent } from './components/product-cart/product-cart.com
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 const routes: Routes = [
-  { path: 'productDetail/:id', component: ProductDetailComponent},
+  { path: 'productDetail/:ID_Product', component: ProductDetailComponent},
   { path: '', component: BodyHomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'tat-ca-san-pham', component: ProductAllComponent},

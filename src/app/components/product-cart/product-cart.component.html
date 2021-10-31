@@ -1,4 +1,4 @@
-<ng-container *ngIf="true">
+<ng-container *ngIf="items.length !=0">
   <div class="container">
   <div class="card-table">
     <div class="cart-product">
@@ -13,16 +13,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let item of items">
             <td>
-              <img src="">
+              <img src="{{item.product.productImg}}">
             </td>
-            <td>Giày thể thao</td>
-            <td>700000</td>
-            <td>1</td>
-            <td>700000</td>
+            <td>{{item.product.productName}}</td>
+            <td>{{ item.product.Price | currency }}</td>
+            <td>{{ item.quantity}}</td>
+            <td>{{item.total | currency }}</td>
             <td>
-              <button class="btn btn-danger">X</button>
+              <button class="btn btn-danger" (click)="removeItem(item)">X</button>
             </td>
           </tr>
         </tbody>
@@ -31,7 +31,7 @@
   </div>
 </div>
 </ng-container>
-<ng-container *ngIf="false">
+<ng-container *ngIf="items.length == 0">
   <div class="container">
     <div class="card">
       <h5 class="card-title">Giỏ hàng</h5>

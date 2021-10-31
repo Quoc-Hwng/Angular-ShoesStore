@@ -7,7 +7,7 @@ export class Product {
   Color!: string;
   Quantity!: number
   Sex!: string;
-  Price!: string;
+  Price!: number;
   Description!: string;
   Brand!: string;
 }
