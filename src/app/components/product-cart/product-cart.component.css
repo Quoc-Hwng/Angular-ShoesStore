@@ -40,3 +40,24 @@ h4,h6{
   padding: 12px 72px;
   border-radius: 3px!important;
 }
+nput::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.change-quantity {
+  display: inline-block;
+  width: 26px;
+}
+.quantity-number{
+  width: 36px;
+  display: inline;
+  line-height: 26px;
+}
+.quantity-number::focus {
+  outline: none;
+}

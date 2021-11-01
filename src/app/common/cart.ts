@@ -6,7 +6,7 @@ export class CartItem{
   total : number;
   constructor(product : Product, quantity : number, total : number){
     this.product = product;
-    this.quantity = 1;
+    this.quantity = quantity;
     this.total = quantity * this.product.Price;
   }
 }

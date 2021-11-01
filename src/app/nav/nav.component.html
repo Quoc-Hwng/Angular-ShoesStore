@@ -34,7 +34,8 @@
       <mat-icon (click)="search()">search</mat-icon>
     </div>
     <div><span class="example-spacer"></span>
-    <button mat-icon-button color="primary" aria-label="This is cart" routerLink="/gio-hang">
+      <button mat-icon-button color="primary" aria-label="This is cart" routerLink="/gio-hang">
+      <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
       <mat-icon>local_mall</mat-icon>
     </button>
     <button mat-icon-button color="primary" aria-label="This is login" routerLink="/login">

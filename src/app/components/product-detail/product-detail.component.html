@@ -21,12 +21,12 @@
         <span>Số lượng: </span>
         <div>
           <button class="btn btn-light change-quantity text-center"> + </button>
-          <input class="quantity-number" type="number"/>
+          <input [(ngModel)]="quantity" class="quantity-number" type="number"/>
           <button class="btn btn-light change-quantity text-center"> - </button>
         </div>
       </div>
       <div class="">
-        <button class="btn btn-primary" (click)="addToCart(product)" >THÊM VÀO GIỎ</button>
+        <button class="btn btn-primary" (click)="addtocart(product,quantity)" >THÊM VÀO GIỎ</button>
         <button class="btn btn-primary">MUA NGAY</button>
       </div>
 

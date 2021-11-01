@@ -10,7 +10,7 @@ import { CartService } from '../service/cart.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit{
-
+  public totalItem : number = 0;
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -19,10 +19,10 @@ export class NavComponent implements OnInit{
   public totalItems: number = 0;
   constructor(private breakpointObserver: BreakpointObserver, private cartService: CartService) {}
   ngOnInit(){
-    // this.cartService.getItems().subscribe(res=>{
-    //   this.totalItems = res.items.length;
-    // })
-  }
+    this.cartService.getProducts()
+    .subscribe(res=>{
+      this.totalItem = res.length;
+    })  }
   public search(){
     alert(123);
   }

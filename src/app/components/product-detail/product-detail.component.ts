@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from '../../common/product';
 import { ProductService } from 'src/app/service/product.service';
@@ -12,11 +12,18 @@ import { CartService } from 'src/app/service/cart.service';
 })
 export class ProductDetailComponent implements OnInit {
   product: Product;
-  @Input() item: any;
   images: any = [];
   id: any;
-  addToCart(product: Product) {
-    this.cartService.addToCart(product);
+  quantity: number;
+  // addToCart(product: Product) {
+  //   this.cartService.addToCart(product);
+  //   window.alert('Your product has been added to the cart!');
+  // }
+  addtocart(item: Product, quantity: number){
+    if(quantity === null){
+      quantity = 1;
+    }
+    this.cartService.addfromDetail(item,quantity);
     window.alert('Your product has been added to the cart!');
   }
   constructor(private route: ActivatedRoute, private productService: ProductService, private cartService: CartService) {
@@ -29,7 +36,7 @@ export class ProductDetailComponent implements OnInit {
       this.product = this.Pro[0];
       // this.product = data as Product;
     });
-    this.product = this.item;
+    this.quantity = 1;
     // const routeParams = this.route.snapshot.paramMap;
     // const productIdFromRoute = String(routeParams.get('ID_Product'));
 
